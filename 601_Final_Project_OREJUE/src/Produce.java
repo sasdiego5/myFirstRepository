@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 /**
  * Produce class represents an item object each item has a name, price and
@@ -12,6 +13,7 @@ public class Produce
 
 	private String produceItem;
 	private double Price, Quantity;
+	private ArrayList<Produce> ProduceList = new ArrayList<Produce>();
 
 	// Produce object with its corresponding attributes
 	public Produce(String produceItem, double price, double quantity)

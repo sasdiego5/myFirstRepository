@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 /**
  * Receipt class creates a sales receipt from the market contains supporting
@@ -14,6 +15,8 @@ public class Receipt
 	private double salesTaxPrice;
 	private double discountPrice;
 
+	private ArrayList<Produce> ProduceList = new ArrayList<Produce>();
+	
 	private final double discount = 0.15;
 
 	private final double salesTax = 0.055;
