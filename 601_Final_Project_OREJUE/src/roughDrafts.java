@@ -1,5 +1,5 @@
 import java.text.NumberFormat;
-
+import java.util.*;
 public class roughDrafts
 {
 	// build one array of fruits that references corresponding array of price at
@@ -8,6 +8,10 @@ public class roughDrafts
 	public static void main(String args[])
 	{
 
+		Date d1 = new Date();
+		System.out.println(d1);
+		
+		
 		String[] produceItem =
 		{ "asparagus", "avocados", "red apples", "green apples", "bananas", "green beans", "beets", "blueberries",
 				"broccoli", "blackberries", "cabbage", "cantaloupe", "carrots", "celery", "cauliflower", "coconut",

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class Produce
 {
-
 	private String produceItem;
 	private double Price, Quantity;
 	private ArrayList<Produce> ProduceList = new ArrayList<Produce>();
@@ -21,6 +20,47 @@ public class Produce
 		this.produceItem = produceItem;
 		this.Price = price;
 		this.Quantity = quantity;
+	}
+	
+
+	public String getProduceItem()
+	{
+		return produceItem;
+	}
+
+	public void setProduceItem(String produceItem)
+	{
+		this.produceItem = produceItem;
+	}
+
+	public double getPrice()
+	{
+		return Price;
+	}
+
+	public void setPrice(double price)
+	{
+		Price = price;
+	}
+
+	public double getQuantity()
+	{
+		return Quantity;
+	}
+
+	public void setQuantity(double quantity)
+	{
+		Quantity = quantity;
+	}
+
+	public ArrayList<Produce> getProduceList()
+	{
+		return ProduceList;
+	}
+
+	public void setProduceList(ArrayList<Produce> produceList)
+	{
+		ProduceList = produceList;
 	}
 
 	// toString method that prints each produce object with
