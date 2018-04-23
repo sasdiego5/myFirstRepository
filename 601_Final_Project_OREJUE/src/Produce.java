@@ -11,15 +11,14 @@ import java.util.ArrayList;
 public class Produce
 {
 	private String produceItem;
-	private double Price, Quantity;
+	private double Price;
 	private ArrayList<Produce> ProduceList = new ArrayList<Produce>();
 
 	// Produce object with its corresponding attributes
-	public Produce(String produceItem, double price, double quantity)
+	public Produce(String produceItem, double price)
 	{
 		this.produceItem = produceItem;
 		this.Price = price;
-		this.Quantity = quantity;
 	}
 	
 
@@ -43,16 +42,6 @@ public class Produce
 		Price = price;
 	}
 
-	public double getQuantity()
-	{
-		return Quantity;
-	}
-
-	public void setQuantity(double quantity)
-	{
-		Quantity = quantity;
-	}
-
 	public ArrayList<Produce> getProduceList()
 	{
 		return ProduceList;
@@ -71,7 +60,7 @@ public class Produce
 
 		String productInfo;
 
-		productInfo = fmt.format(Price) + "\t\t" + Quantity + "\t\t" + produceItem;
+		productInfo = fmt.format(Price) + "\t\t" + "\t\t" + produceItem;
 
 		return productInfo;
 

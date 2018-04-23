@@ -29,7 +29,7 @@ public class Receipt
 	// adds a new produce object to an array virtual shopping cart
 	public void addItem(String produceItem, double price, double quantity)
 	{
-		shopCart[count] = new Produce(produceItem, price, quantity);
+		shopCart[count] = new Produce(produceItem, price);
 
 		totalCost += price;
 
