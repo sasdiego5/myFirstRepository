@@ -12,6 +12,7 @@ public class Produce
 {
 	private String produceItem;
 	private double Price;
+	private double Pounds;
 	private ArrayList<Produce> ProduceList = new ArrayList<Produce>();
 
 	// Produce object with its corresponding attributes
@@ -21,6 +22,22 @@ public class Produce
 		this.Price = price;
 	}
 	
+	public Produce(String produceItem, double price, double pounds)
+	{
+		this.produceItem = produceItem;
+		this.Price = price;
+		this.Pounds = pounds;
+	}
+
+	public double getPounds()
+	{
+		return Pounds;
+	}
+
+	public void setPounds(double pounds)
+	{
+		Pounds = pounds;
+	}
 
 	public String getProduceItem()
 	{
@@ -60,7 +77,7 @@ public class Produce
 
 		String productInfo;
 
-		productInfo = fmt.format(Price) + "\t\t" + "\t\t" + produceItem;
+		productInfo = fmt.format(Price) + "\t\t" + Pounds + "\t\t" + produceItem;
 
 		return productInfo;
 

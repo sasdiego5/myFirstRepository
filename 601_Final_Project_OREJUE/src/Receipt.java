@@ -23,13 +23,13 @@ public class Receipt
 
 	public Receipt()
 	{
-		shopCart = new Produce[48];
+		shopCart = new Produce[50];
 	}
 
 	// adds a new produce object to an array virtual shopping cart
 	public void addItem(String produceItem, double price, double quantity)
 	{
-		shopCart[count] = new Produce(produceItem, price);
+		shopCart[count] = new Produce(produceItem, price, quantity);
 
 		totalCost += price;
 
