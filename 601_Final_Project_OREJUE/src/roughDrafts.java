@@ -120,73 +120,103 @@ public class roughDrafts
 
 		StdOut.println("Final price " + fmt.format(finalCost));
 
+//		// the index of both producePrice and produceItem are interrelated
+//
+//		// String Array that stores all fruits and vegetables sold in the market
+//		String[] produceItem =
+//		{ "asparagus", "avocados", "red apples", "green apples", "bananas", "green beans", "beets", "blueberries",
+//				"broccoli", "blackberries", "cabbage", "cantaloupe", "carrots", "celery", "cauliflower", "coconut",
+//				"cherries", "cucumbers", "cranberries", "eggplant", "garlic", "grapes", "grapefruit", "kiwis", "lemons",
+//				"romain lettuce", "limes", "mangos", "mushrooms", "mint", "yellow onions", "sweet onions", "oranges",
+//				"pears", "green peppers", "red peppers", "pineapple", "peas", "potatoes", "strawberries", "peaches",
+//				"spinach", "squash", "sweet potato", "tomato cherry", "tomato roma", "watermelon", "zucchini" };
+//
+//		// double Array that stores the prices of all fruits and vegetables in
+//		// the market
+//		double[] producePrice =
+//		{ 2.87, 1.90, 1.07, 1.21, 1.86, 0.88, 1.88, 3.26, 1.96, 4.20, 1.16, 1.33, 0.83, 1.30, 3.74, 1.45, 1.26, 3.82,
+//				0.83, 1.52, 2.27, 3.27, 3.56, 0.88, 0.87, 1.46, 1.86, 0.94, 0.96, 1.29, 1.69, 1.00, 1.32, 1.85, 1.65,
+//				1.84, 3.30, 3.40, 1.96, 2.57, 2.79, 1.87, 1.28, 1.61, 3.64, 1.72, 2.99, 1.58 };
+//
+//		// creates a new Receipt that stores the items the user wants to buy
+//		Receipt shopCart = new Receipt();
+//
+//		NumberFormat fmt = NumberFormat.getCurrencyInstance();
+//
+//		double subTotal = 0.0;
+//
+//		StdOut.println("Welcome to the Virtual produce store, we sell many fruits and vegetables by the pound!");
+//
+//		String buyOrPay = "yes";
+//
+//		// do while loop to add as many items as desired
+//		do
+//		{
+//			StdOut.println("Enter item you desire to buy:");
+//			String purchaseItem = StdIn.readLine();
+//
+//			StdOut.println("How many pounds of " + purchaseItem + " do you want?");
+//			double purchasePounds = StdIn.readDouble();
+//
+//			StdIn.readLine();
+//
+//			StdOut.println("Scanning: " + purchasePounds + " pounds of " + purchaseItem);
+//
+//			double itemPrice = 0.00;
+//
+//			// iterates over produceItem array to find string input with
+//			// corresponding
+//			// double price, which has the same index
+//			for (int i = 0; i < produceItem.length; i++)
+//			{
+//				if (produceItem[i].equalsIgnoreCase(purchaseItem))
+//					itemPrice = producePrice[i] * purchasePounds;
+//			}
+//
+//			StdOut.println(fmt.format(itemPrice));
+//			StdOut.println();
+//
+//			// adds a new item to the sales receipt
+//			shopCart.addItem(purchaseItem, itemPrice, purchasePounds);
+//
+//			subTotal += itemPrice;
+//
+//			StdOut.println("Subtotal: " + fmt.format(subTotal));
+//
+//			StdOut.println();
+//
+//			StdOut.println("Add more items?");
+//
+//			buyOrPay = StdIn.readLine();
+//
+//		}
+//		while (buyOrPay.equalsIgnoreCase("yes"));
+//
+//		StdOut.println("Amount due: " + fmt.format(subTotal));
+//
+//		StdOut.println();
+//
+//		StdOut.println("Do you have a discount Farmer's Market membership?");
+//
+//		char chIn = StdIn.readChar();
+//
+//		shopCart.addDiscount(chIn);
+//
+//		StdIn.readLine();
+//
+//		shopCart.addSalesTax();
+//
+//		StdOut.println(shopCart);
+//
+//		StdOut.println("15% Membership Discount " + shopCart.addDiscount(chIn));
+//		StdOut.println();
+//
+//		StdOut.println("Sales Tax " + shopCart.addSalesTax());
+//		StdOut.println();
+//
+//		StdOut.println("Total " + shopCart.getTotalCost());
+//		StdOut.println();
+//
+//		StdOut.println("Thank you for Shopping at the Virtual Farmer's Market");
 	}
-
 }
-
-// JOptionPane
-// import javax.swing.*
-// javax.swing.JOptionPane
-// review java doc on JOptionPane and use examples
-// JOptionPane.showMessageDialog(null, "alert", "alert",
-// JOptionPane.ERROR_MESSAGE);
-// String inputValue = JOptionPane.showInputDialog("Please input a value");
-
-
-
-// Produce[] produceItem =
-// {
-// new Produce("Asparagus"), new Produce("Avocados"), new Produce("Red Apples"),
-// new Produce("Green Apples"),
-// new Produce("Bananas"), new Produce("Green Beans"), new Produce("Beets"), new
-// Produce("Blueberries"),
-// new Produce("Broccoli"), new Produce("Blackberries"), new Produce("Cabbage"),
-// new Produce("Cantaloupe"),
-// new Produce("Carrots"), new Produce("Celery"), new Produce("Cauliflower"),
-// new Produce("Clementines"),
-// new Produce("Coconut"), new Produce("Cherries"), new Produce("Cucumber"), new
-// Produce("Cranberries"),
-// new Produce("Eggplant"), new Produce("Garlic"), new Produce("Grapes"), new
-// Produce("Grapefruit"),
-// new Produce("Kiwi"), new Produce("Lemons"), new Produce("Romain Lettuce"),
-// new Produce("Limes"),
-// new Produce("Mangos"), new Produce("Mushroom"), new Produce("Mint"), new
-// Produce("Yellow Onions"),
-// new Produce("Sweet Onions"), new Produce("Pears"), new Produce("Green
-// Peppers"), new Produce("Red Peppers"),
-// new Produce("Pinneapple"), new Produce("Peas"), new Produce("Potatoes"), new
-// Produce("Strawberries"),
-// new Produce("Peaches"), new Produce("Spinach"), new Produce("Squash"), new
-// Produce("Sweet Potato"),
-// new Produce("Tomato Cherry"), new Produce("Tomato Roma"), new
-// Produce("Watermelon"), new Produce("Zucchini")
-// };
-//
-// Produce[] producePrice =
-// {
-// new Produce(2.87), new Produce(1.90), new Produce(1.07), new Produce(1.21),
-// new Produce(1.86), new Produce(0.88), new Produce(1.88), new Produce(3.26),
-// new Produce(1.96), new Produce(4.20), new Produce(1.16), new Produce(1.33),
-// new Produce(0.83), new Produce(1.30), new Produce(3.74), new Produce(1.45),
-// new Produce(1.26), new Produce(3.82), new Produce(0.83), new Produce(1.52),
-// new Produce(2.27), new Produce(3.27), new Produce(3.56), new Produce(0.88),
-// new Produce(0.87), new Produce(1.46), new Produce(1.86), new Produce(0.94),
-// new Produce(0.96), new Produce(1.29), new Produce(1.69), new Produce(1.00),
-// new Produce(1.32), new Produce(1.85), new Produce(1.65), new Produce(1.84),
-// new Produce(3.30), new Produce(3.40), new Produce(1.96), new Produce(2.57),
-// new Produce(2.79), new Produce(1.87), new Produce(1.28), new Produce(1.61),
-// new Produce(3.64), new Produce(1.72), new Produce(2.99), new Produce(1.58)
-// };
-//
-//String[] produceItem =
-//{ "asparagus", "avocados", "red apples", "green apples", "bananas", "green beans", "beets", "blueberries",
-//		"broccoli", "blackberries", "cabbage", "cantaloupe", "carrots", "celery", "cauliflower", "coconut",
-//		"cherries", "cucumber", "cranberries", "eggplant", "garlic", "grapes", "grapefruit", "kiwi", "lemons",
-//		"romain lettuce", "limes", "mangos", "mushrooms", "mint", "yellow onions", "sweet onions", "oranges",
-//		"pears", "green peppers", "red peppers", "pineapple", "peas", "potatoes", "strawberries", "peaches",
-//		"spinach", "squash", "sweet potato", "tomato cherry", "tomato roma", "watermelon", "zucchini" };
-//
-//double[] producePrice =
-//{ 2.87, 1.90, 1.07, 1.21, 1.86, 0.88, 1.88, 3.26, 1.96, 4.20, 1.16, 1.33, 0.83, 1.30, 3.74, 1.45, 1.26, 3.82,
-//		0.83, 1.52, 2.27, 3.27, 3.56, 0.88, 0.87, 1.46, 1.86, 0.94, 0.96, 1.29, 1.69, 1.00, 1.32, 1.85, 1.65,
-//		1.84, 3.30, 3.40, 1.96, 2.57, 2.79, 1.87, 1.28, 1.61, 3.64, 1.72, 2.99, 1.58 };

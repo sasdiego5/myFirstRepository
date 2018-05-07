@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.Date;
 
 /**
  *@author Diego F Orejuela.
@@ -22,30 +23,44 @@ public class VirtualMarket
 	public static void main(String args[])
 	{
 
-		// the index of both producePrice and produceItem are interrelated
-
-		// String Array that stores all fruits and vegetables sold in the market
-		String[] produceItem =
-		{ "asparagus", "avocados", "red apples", "green apples", "bananas", "green beans", "beets", "blueberries",
-				"broccoli", "blackberries", "cabbage", "cantaloupe", "carrots", "celery", "cauliflower", "coconut",
-				"cherries", "cucumbers", "cranberries", "eggplant", "garlic", "grapes", "grapefruit", "kiwis", "lemons",
-				"romain lettuce", "limes", "mangos", "mushrooms", "mint", "yellow onions", "sweet onions", "oranges",
-				"pears", "green peppers", "red peppers", "pineapple", "peas", "potatoes", "strawberries", "peaches",
-				"spinach", "squash", "sweet potato", "tomato cherry", "tomato roma", "watermelon", "zucchini" };
-
-		// double Array that stores the prices of all fruits and vegetables in
-		// the market
-		double[] producePrice =
-		{ 2.87, 1.90, 1.07, 1.21, 1.86, 0.88, 1.88, 3.26, 1.96, 4.20, 1.16, 1.33, 0.83, 1.30, 3.74, 1.45, 1.26, 3.82,
-				0.83, 1.52, 2.27, 3.27, 3.56, 0.88, 0.87, 1.46, 1.86, 0.94, 0.96, 1.29, 1.69, 1.00, 1.32, 1.85, 1.65,
-				1.84, 3.30, 3.40, 1.96, 2.57, 2.79, 1.87, 1.28, 1.61, 3.64, 1.72, 2.99, 1.58 };
-
 		// creates a new Receipt that stores the items the user wants to buy
 		Receipt shopCart = new Receipt();
 
 		NumberFormat fmt = NumberFormat.getCurrencyInstance();
 
-		double subTotal = 0.0;
+		double subTotal = 0.0;	
+		
+		Date d1 = new Date();
+				
+		 Produce[] StoreProduce =
+			 {
+			 new Produce("Asparagus", 2.87), new Produce("Avocados", 1.90), new
+			 Produce("Red Apples", 1.07), new Produce("Green Apples", 1.21),
+			 new Produce("Bananas", 1.86), new Produce("Green Beans", 0.88), new
+			 Produce("Beets", 1.88), new Produce("Blueberries", 3.26),
+			 new Produce("Broccoli", 1.96), new Produce("Blackberries", 4.20), new
+			 Produce("Cabbage", 1.16), new Produce("Cantaloupe", 1.33),
+			 new Produce("Carrots", 0.83), new Produce("Celery", 1.30), new
+			 Produce("Cauliflower", 3.74), new Produce("Clementines", 1.45),
+			 new Produce("Coconut", 1.26), new Produce("Cherries", 3.82), new
+			 Produce("Cucumber", 0.83), new Produce("Cranberries", 1.52),
+			 new Produce("Eggplant", 2.27), new Produce("Garlic", 3.27), new
+			 Produce("Grapes", 3.56), new Produce("Grapefruit", 0.88),
+			 new Produce("Kiwi", 0.87), new Produce("Lemons", 1.46),
+			 new Produce("Romain Lettuce", 1.86),  new Produce("Limes", 0.94),
+			 new Produce("Mangos", 0.96), new Produce("Mushroom", 1.29), new
+			 Produce("Mint", 1.69), new Produce("Yellow Onions", 1.00),
+			 new Produce("Sweet Onions", 1.32), new Produce("Pears", 1.85), new
+			 Produce("Green Peppers", 1.65), new Produce("Red Peppers", 1.84),
+			 new Produce("Pinneapple", 3.30), new Produce("Peas", 3.40), new
+			 Produce("Potatoes", 1.96), new Produce("Strawberries", 2.57),
+			 new Produce("Peaches", 2.79), new Produce("Spinach", 1.87), new
+			 Produce("Squash", 1.28), new Produce("Sweet Potato", 1.61),
+			 new Produce("Tomato Cherry", 3.64), new Produce("Tomato Roma", 1.72), new
+			 Produce("Watermelon", 2.99), new Produce("Zucchini", 1.58)
+			 };
+
+		System.out.println(d1);
 
 		StdOut.println("Welcome to the Virtual produce store, we sell many fruits and vegetables by the pound!");
 
@@ -69,10 +84,10 @@ public class VirtualMarket
 			// iterates over produceItem array to find string input with
 			// corresponding
 			// double price, which has the same index
-			for (int i = 0; i < produceItem.length; i++)
+			for (int i = 0; i < StoreProduce.length; i++)
 			{
-				if (produceItem[i].equalsIgnoreCase(purchaseItem))
-					itemPrice = producePrice[i] * purchasePounds;
+				if (StoreProduce[i].getProduceItem().equals(purchaseItem))
+					itemPrice = StoreProduce[i].getPrice() * purchasePounds;
 			}
 
 			StdOut.println(fmt.format(itemPrice));
