@@ -83,4 +83,15 @@ public class Produce
 
 	}
 
+	public String toString1()
+	{
+		NumberFormat fmt = NumberFormat.getCurrencyInstance();
+
+		String productInfo;
+		
+		productInfo = fmt.format(Price) +"\t\t" + produceItem;
+
+		return productInfo;
+
+	}
 }

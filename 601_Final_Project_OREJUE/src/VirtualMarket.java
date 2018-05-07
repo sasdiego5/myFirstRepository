@@ -1,37 +1,15 @@
 import java.text.NumberFormat;
 import java.util.Date;
 
-/**
- *@author Diego F Orejuela.
- *SEIS 601 - 04 Friday
- *December 15, 2017
- *Virtual Farmer's Market 
- *The program consists of a fruits and vegetables market.
- *The user has the option to add as many items as desired
- *and decide how many pounds of that item wants to purchase.
- *The item, price and quantity are stored in a shopping cart.
- *At the end a sales receipt is printed with an optional
- *discount for members only.
- */
-
-/**
- * VirtualMarket class contains the main method. This class is used to call
- * necessary methods from other classes
- */
 public class VirtualMarket
 {
-	public static void main(String args[])
+
+	private Inventory inventory = new Inventory();
+	private Receipt shopCart = new Receipt();
+	
+	public void Shop()
 	{
-
-		Inventory inventory = new Inventory();
-
-		Receipt shopCart = new Receipt();
-
 		NumberFormat fmt = NumberFormat.getCurrencyInstance();
-		
-		Date d1 = new Date();
-
-		System.out.println(d1);
 
 		StdOut.println("Welcome to the Virtual produce store, we sell many fruits and vegetables by the pound!");
 
@@ -87,8 +65,6 @@ public class VirtualMarket
 		shopCart.addDiscount(chIn);
 
 		StdIn.readLine();
-
-		shopCart.addSalesTax();
 
 		StdOut.println(shopCart);
 

@@ -1,5 +1,3 @@
-import java.text.NumberFormat;
-import java.util.*;
 
 public class Inventory
 {
@@ -44,6 +42,16 @@ public class Inventory
 			}
 
 		 return itemPrice;
-		
+	 }
+	 
+	 public String toString() {
+		 
+		 String inventory = "Price\t\t Item\n\n";
+		 
+			for (int item = 0; item < StoreProduce.length; item++)
+				inventory += StoreProduce[item].toString1() + "\n\n";
+			
+			return inventory;
+		 
 	 }
 }

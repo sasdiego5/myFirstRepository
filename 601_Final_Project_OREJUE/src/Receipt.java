@@ -1,5 +1,5 @@
 import java.text.NumberFormat;
-import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Receipt class creates a sales receipt from the market contains supporting
@@ -13,12 +13,8 @@ public class Receipt
 	private int count;
 	private double totalCost;
 	private double salesTaxPrice;
-	private double discountPrice;
-
-	private ArrayList<Produce> ProduceList = new ArrayList<Produce>();
-	
+	private double discountPrice;	
 	private final double discount = 0.15;
-
 	private final double salesTax = 0.055;
 
 	public Receipt()
@@ -79,12 +75,15 @@ public class Receipt
 	// toString method to print the sales receipt
 	public String toString()
 	{
+		Date date = new Date();
+		
 		NumberFormat fmt = NumberFormat.getCurrencyInstance();
 
 		String receipt = "************************************************* \n";
+		receipt += date + "\n";
 		receipt += "Virtual Farmer's Market Sales Receipt \n \n";
 
-		receipt += "Price\t\t Pounds \t\t Item\n\n";
+		receipt += "Price\t\t Pounds \t Item\n\n";
 
 		for (int item = 0; item < count; item++)
 			receipt += shopCart[item].toString() + "\n\n";
